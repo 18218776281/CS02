@@ -1,0 +1,49 @@
+C#企业级开发技术练习2答题卡班级：信管1班     姓名：陈国志     学号： 20190307140    注：请将答案放置在序号下方。
+                     */（一）
+                     namespace ConsoleApp3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] languages = { "javascript", "net", "ecmascript", "golang","java" };
+            int i = 97;
+            foreach (string c in languages)
+            {
+                Console.Write(c.PadRight(12, '*')) ;
+                Console.WriteLine($"{i++.ToString().PadLeft(6, '*')}");
+            }
+
+        }
+    }
+}
+
+
+
+
+（二）namespace ConsoleApp3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("程序语言");
+            string lgs = "javascript,.net,ecmascript,golang,java";
+            string[] r = lgs.Split(',');
+            foreach (string s in r)
+                Console.WriteLine(s);
+            string[] course = { "jayt", "jaye", "ayt", "auyt" };
+            int a = 0, j = 0, t= 0;
+            Console.WriteLine("其中");
+            foreach (string s in course)
+            {
+                if (s.Contains("y")) a++;
+                if (s.StartsWith("j")) j++;
+                if (s.EndsWith("t")) t++;
+            }
+            Console.WriteLine($"包含a:{a},j开头:{j},t结尾:{t}");
+
+
+        }
+    }
+}
